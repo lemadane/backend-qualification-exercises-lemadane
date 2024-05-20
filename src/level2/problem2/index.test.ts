@@ -1,7 +1,7 @@
-import { DowntimeLogs, merge } from './';
+import { DowntimeLogList, merge } from './';
 
 describe('mergeDowntimeLogs', () => {
-  const cases: [string, DowntimeLogs[], DowntimeLogs][] = [
+  const cases: [string, DowntimeLogList[], DowntimeLogList][] = [
     [
       'islands',
       [
@@ -29,6 +29,6 @@ describe('mergeDowntimeLogs', () => {
   ];
 
   test.each(cases)('%p', (_, input, expected) => {
-    expect(merge(...input)).toEqual(expected);
+    expect(merge(input)).toEqual(expected);
   });
 });
