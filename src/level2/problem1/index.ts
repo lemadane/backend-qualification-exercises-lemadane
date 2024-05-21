@@ -1,4 +1,4 @@
-export default class ExecutionCache<TArgs extends any[], TResult> {
+export class ExecutionCache<TArgs extends any[], TResult> {
   private cache: Map<string, Promise<TResult>>;
   private readonly handler: (...args: TArgs) => Promise<TResult>;
 
